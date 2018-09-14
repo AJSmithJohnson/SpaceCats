@@ -7,10 +7,12 @@ public class WeaponHolder : MonoBehaviour {
     public Camera cam;
     private PlaneLock planeLock;
     private Rigidbody body;
+    private Weapon weapon;
 
 	void Start () {
         planeLock = GetComponent<PlaneLock>();
         body = GetComponent<Rigidbody>();
+        weapon = GetComponentInChildren<Weapon>();
 	}
 	
 	void Update () {
@@ -19,20 +21,21 @@ public class WeaponHolder : MonoBehaviour {
         Plane plane = new Plane(Vector3.back, transform.position);
         float dis;
 
-        Vector3 dir = Vector3.zero;
+        Vector3 thrustDir = Vector3.zero;
 
         if (planeLock.plane.Raycast(ray, out dis))
         {
             Vector3 pos = ray.GetPoint(dis);
             Debug.DrawLine(transform.position, pos);
-            dir = transform.position - pos;
+            thrustDir = transform.position - pos;
             
         }
 
         if (Input.GetButton("Fire1"))
         {
-            dir.Normalize();
-            body.AddForce(dir * Time.deltaTime * 50);
+            thrustDir.Normalize();
+            float thrust = weapon.Shoot(-thrustDir);
+            body.AddForce(thrustDir * Time.deltaTime * thrust);
         }
 	}
 }

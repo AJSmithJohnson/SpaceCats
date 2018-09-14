@@ -453,3 +453,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceKickback: 100
+  prefabProjectile: {fileID: 114677951133908380, guid: 30e6c9d562cd9084ba03d0e28c2ac0b4,
+    type: 2}
