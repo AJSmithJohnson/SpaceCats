@@ -28,7 +28,10 @@ public class Player : MonoBehaviour {
         {
             iTimeRemaining -= Time.deltaTime;
         }
+        
 	}
+
+
     public void TakeDamage(float amt)
     {
         if (canTakeDamage)
