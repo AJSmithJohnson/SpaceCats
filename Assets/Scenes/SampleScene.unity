@@ -265,8 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4902d7be2765d5a498bb54b92b87f3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravPower: 400
-  angle: -90
 --- !u!1 &94012268
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 114677951133908380, guid: 30e6c9d562cd9084ba03d0e28c2ac0b4,
     type: 2}
-  forceKickback: 1000
+  forceKickback: 2
   ammoMax: 100000
   bulletDelay: 0.1
 --- !u!1001 &1170085398

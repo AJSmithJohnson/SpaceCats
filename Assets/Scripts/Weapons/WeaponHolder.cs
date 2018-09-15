@@ -35,7 +35,7 @@ public class WeaponHolder : MonoBehaviour {
         {
             thrustDir.Normalize();
             float thrust = weapon.Shoot(-thrustDir);
-            body.AddForce(thrustDir * Time.deltaTime * thrust);
+            body.AddForce(thrustDir * thrust, ForceMode.Impulse);
         }
 	}
 }

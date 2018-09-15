@@ -5,60 +5,27 @@ using UnityEngine;
 public class Gravity : MonoBehaviour
 {
 
-    static public float gravPower = 400;
-    static public float angle = 361;
-    bool moving = false;
-
+    static private Vector3 acceleration;
     Rigidbody body;
-
-
-    // Use this for initialization
+    
     void Start()
     {
-        //get rigidbody component
         body = GetComponent<Rigidbody>();
+        SetGravity(270);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            SetGravityAngle(270);
-        }
-
-        if (moving)
-        {
-            Vector2 direction = DegreeToVector2(angle);
-            
-            body.AddForce(direction * gravPower * Time.deltaTime);
-        }
+        body.AddForce(acceleration * Time.deltaTime);
     }
-
-    //set random angle
-    public float SetGravityAngle()
+    static void RandomGravityDirection()
     {
-        angle = Random.Range(0, 360);
-        moving = true;
-
-        return angle;
+        SetGravity(Random.Range(0, 360));
     }
-
-    //set angle to specific number
-    public float SetGravityAngle(float angle)
+    static private void SetGravity(float angle, float power = 200)
     {
-        Debug.Log(angle);
-        moving = true;
-
-        return angle;
-    }
-
-    //convert angle to vector2
-    public static Vector2 DegreeToVector2(float degree)
-    {
-        //convert angle to rad
-        float rad = degree * Mathf.Deg2Rad;
-
-        return new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+        angle *= Mathf.Deg2Rad;
+        Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+        acceleration = direction * power;
     }
 }
