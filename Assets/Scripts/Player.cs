@@ -37,8 +37,8 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void Bounce()
+    public void Bounce()//Add a game object reference and calculate bounce facter here
     {
-        rb.AddForce(bounceFactor.x, bounceFactor.y, 0, ForceMode.Impulse);
+        //.AddForce(bounceFactor.x, bounceFactor.y, 0, ForceMode.Impulse);
     }
 }

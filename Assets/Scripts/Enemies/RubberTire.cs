@@ -10,13 +10,13 @@ public class RubberTire : Enemy {
         target = GameObject.Find("Player");
         playerScript = GameObject.Find("Player").GetComponent<Player>();
         boxCol = GetComponent<BoxCollider>();
-        rb = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        rb.velocity = Vector3.zero;
-        bounceFactor = target.transform.position - this.transform.position;
+        body.velocity = Vector3.zero;
+        
 	}
 
     void OnCollisionEnter(Collision collision)
@@ -26,8 +26,8 @@ public class RubberTire : Enemy {
         {
             if (playerScript.canTakeDamage)
             {
-                
-                playerScript.bounceFactor = bounceFactor * 3;
+               // bounceFactor = target.transform.position - this.transform.position;//Move bounce factor to
+                //playerScript.bounceFactor = bounceFactor * 3;
                 playerScript.Bounce();
                
             }

@@ -22,7 +22,7 @@ public class FollowerEnemy : Enemy {
         
         chaseTarget = target.transform.position - this.transform.position;
         //this.transform.position += chaseTarget * .2f;
-        rb.AddForce(chaseTarget.x, chaseTarget.y, 0);
+        body.AddForce(chaseTarget.x, chaseTarget.y, 0);
        
     }
 
