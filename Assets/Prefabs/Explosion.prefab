@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1660941973640258}
+  m_RootGameObject: {fileID: 1621945630524480}
   m_IsPrefabAsset: 1
---- !u!1 &1660941973640258
+--- !u!1 &1621945630524480
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4586510241906530}
-  - component: {fileID: 33511235471925024}
-  - component: {fileID: 23805246155533072}
-  - component: {fileID: 65974580943793882}
-  - component: {fileID: 114574239785772128}
-  - component: {fileID: 54949315828892374}
+  - component: {fileID: 4091836997750100}
+  - component: {fileID: 33668457731797046}
+  - component: {fileID: 23543277250594442}
+  - component: {fileID: 135678960563934572}
+  - component: {fileID: 114518731654496188}
+  - component: {fileID: 54183273992042488}
   m_Layer: 0
-  m_Name: FollowerEnemy
-  m_TagString: Enemy
+  m_Name: Explosion
+  m_TagString: BackGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4586510241906530
+--- !u!4 &4091836997750100
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660941973640258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.54, y: 0, z: -0.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1621945630524480}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.5150003, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.37425, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23805246155533072
+--- !u!23 &23543277250594442
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660941973640258}
+  m_GameObject: {fileID: 1621945630524480}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,19 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33511235471925024
+--- !u!33 &33668457731797046
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660941973640258}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54949315828892374
+  m_GameObject: {fileID: 1621945630524480}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54183273992042488
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660941973640258}
+  m_GameObject: {fileID: 1621945630524480}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -99,29 +99,17 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 72
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65974580943793882
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660941973640258}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114574239785772128
+--- !u!114 &114518731654496188
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660941973640258}
+  m_GameObject: {fileID: 1621945630524480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d15aa909fa51d4bba96cc3a99cab3b, type: 3}
+  m_Script: {fileID: 11500000, guid: bbee9fcc190764d4fa3bdcce54455f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
@@ -133,3 +121,15 @@ MonoBehaviour:
   body: {fileID: 0}
   bounceForce: 0
   chaseTarget: {x: 0, y: 0, z: 0}
+--- !u!135 &135678960563934572
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621945630524480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
