@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class FollowerEnemy : Enemy {
 
-    public Vector3 chaseTarget;
+    
     void Start()
     {
         health = 50;
         damage = 20;
         speed = 2;
+       // bounceForce = 0.5;
         target = GameObject.Find("Player");
-        playerScript = target.GetComponent<Player>();
+        
         boxCol = GetComponent<BoxCollider>();
         body = GetComponent<Rigidbody>();
        
@@ -31,19 +32,19 @@ public class FollowerEnemy : Enemy {
 
         if (collision.gameObject.name == "Player")
         {
-            // FIX: Get player script here?
+            playerScript = target.GetComponent<Player>();
             if (playerScript.canTakeDamage)
             {
-                playerScript.TakeDamage(health);
-                playerScript.Bounce();
-                boxCol.isTrigger = true;
-                BounceBack();
+                playerScript.TakeDamage(damage);
+                ApplyBounce(target.transform.position);
+                playerScript.Bounce(chaseTarget);
             }
         }
         
     }
 
-    void BounceBack()
+
+    /*void BounceBack()
     {
         // TODO: Move to Enemy class? I think other Enemy types will want this.
         // Make `chaseTarget` a parameter of the function
@@ -51,5 +52,5 @@ public class FollowerEnemy : Enemy {
         boxCol.isTrigger = false;
        
     }
-    
+    */
 }
