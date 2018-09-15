@@ -201,7 +201,7 @@ Transform:
   m_Children:
   - {fileID: 1050907958}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &74174277
 MonoBehaviour:
@@ -283,7 +283,7 @@ Transform:
   m_Children:
   - {fileID: 534669905}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &94012270
 MonoBehaviour:
@@ -515,6 +515,7 @@ Transform:
   m_Father: {fileID: 94012269}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< fixtest
 --- !u!1 &715425595
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,19 +697,50 @@ MonoBehaviour:
   chaseTarget: {x: 0, y: 0, z: 0}
 --- !u!54 &887208073
 Rigidbody:
+=======
+--- !u!1001 &909703144
+Prefab:
+>>>>>>> Enemys can now take damage and be destroyed
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 887208071}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 72
-  m_CollisionDetection: 0
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.4016517
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1050907957
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,53 +868,53 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.45
       objectReference: {fileID: 0}
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4586510241906530, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    - target: {fileID: 4397824753852480, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1660941973640258, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
-      propertyPath: m_Name
-      value: RubberTire
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114574239785772128, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
-  m_SourcePrefab: {fileID: 100100000, guid: 0e9b770ceb7697b42ab6f630ff1d68b5, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0151a0d3412581645819ea4c8ae40d4a, type: 2}
   m_IsPrefabAsset: 0
+<<<<<<< fixtest
 --- !u!1 &1373689925
+=======
+--- !u!1 &1886808381
+>>>>>>> Enemys can now take damage and be destroyed
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< fixtest
   - component: {fileID: 1373689929}
   - component: {fileID: 1373689928}
   - component: {fileID: 1373689927}
@@ -999,28 +1031,53 @@ GameObject:
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
+=======
+  - component: {fileID: 1886808386}
+  - component: {fileID: 1886808385}
+  - component: {fileID: 1886808384}
+  - component: {fileID: 1886808383}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: BackGround
+>>>>>>> Enemys can now take damage and be destroyed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< fixtest
 --- !u!65 &1603244257
+=======
+--- !u!65 &1886808383
+>>>>>>> Enemys can now take damage and be destroyed
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< fixtest
   m_GameObject: {fileID: 1603244256}
+=======
+  m_GameObject: {fileID: 1886808381}
+>>>>>>> Enemys can now take damage and be destroyed
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< fixtest
 --- !u!23 &1603244258
+=======
+--- !u!23 &1886808384
+>>>>>>> Enemys can now take damage and be destroyed
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< fixtest
   m_GameObject: {fileID: 1603244256}
+=======
+  m_GameObject: {fileID: 1886808381}
+>>>>>>> Enemys can now take damage and be destroyed
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1030,7 +1087,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
+<<<<<<< fixtest
   - {fileID: 2100000, guid: 8578c35f9c769d1469a594f1811048da, type: 2}
+=======
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+>>>>>>> Enemys can now take damage and be destroyed
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1050,18 +1111,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< fixtest
 --- !u!33 &1603244259
+=======
+--- !u!33 &1886808385
+>>>>>>> Enemys can now take damage and be destroyed
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< fixtest
   m_GameObject: {fileID: 1603244256}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1603244260
+=======
+  m_GameObject: {fileID: 1886808381}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1886808386
+>>>>>>> Enemys can now take damage and be destroyed
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< fixtest
   m_GameObject: {fileID: 1603244256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4277816, y: -1.2, z: -0.14}
@@ -1069,4 +1141,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+=======
+  m_GameObject: {fileID: 1886808381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -10.69, z: 0}
+  m_LocalScale: {x: 37.19, y: 6.7876, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+>>>>>>> Enemys can now take damage and be destroyed
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

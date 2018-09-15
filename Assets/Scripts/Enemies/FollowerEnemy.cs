@@ -7,7 +7,7 @@ public class FollowerEnemy : Enemy {
     
     void Start()
     {
-        health = 50;
+        health = 10;
         damage = 20;
         speed = 2;
        // bounceForce = 0.5;
@@ -44,13 +44,5 @@ public class FollowerEnemy : Enemy {
     }
 
 
-    /*void BounceBack()
-    {
-        // TODO: Move to Enemy class? I think other Enemy types will want this.
-        // Make `chaseTarget` a parameter of the function
-        body.AddForce(-chaseTarget.x , -chaseTarget.y, 0, ForceMode.Impulse);
-        boxCol.isTrigger = false;
-       
-    }
-    */
+   
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
+
+    /// <summary>
+    /// The desired damage of the projectile
+    /// </summary>
+    public float damage = 10;
     /// <summary>
     /// The desired speed of the projectile. When this projectile is
     /// initialized, this value is multiplied by the desired direction.
@@ -47,6 +52,16 @@ public class Projectile : MonoBehaviour {
         age += Time.deltaTime;
         if(age >= lifespan)
         {
+           Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.gameObject.tag == "Enemy")
+        {
+            Enemy enemy = col.gameObject.GetComponent<Enemy>();
+            if(enemy) enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
