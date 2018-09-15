@@ -4,33 +4,38 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    private float health = 100;
 
-    public float health = 100;
-    public float iFrames = 250;
-    public bool canTakeDamage = true;
-    public Vector3 bounceFactor;
-    public Rigidbody rb;
-    // Use this for initialization
-    void Start () {
-        rb = GetComponent<Rigidbody>();
+    public float invulnerableTime = 30;
+    private float iTimeRemaining = 0;
+
+    public bool canTakeDamage {
+        get
+        {
+            return iTimeRemaining <= 0;
+        }
     }
+	// Use this for initialization
+	void Start () {
+		
+	}
 	
 	// Update is called once per frame
 	void Update () {
       
         if(!canTakeDamage)
         {
-            iFrames -= 1;
-            if(iFrames <= 0)
-            {
-                canTakeDamage = true;
-                iFrames = 250;
-            }
+            iTimeRemaining -= Time.deltaTime;
         }
-
-        
-        print(iFrames);
 	}
+    public void TakeDamage(float amt)
+    {
+        if (canTakeDamage)
+        {
+            health -= amt;
+            iTimeRemaining = invulnerableTime;
+        }
+    }
 
     public void Bounce()
     {

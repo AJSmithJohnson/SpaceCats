@@ -11,9 +11,9 @@ public class FollowerEnemy : Enemy {
         damage = 20;
         speed = 2;
         target = GameObject.Find("Player");
-        playerScript =GameObject.Find("Player").GetComponent<Player>();
+        playerScript = target.GetComponent<Player>();
         boxCol = GetComponent<BoxCollider>();
-        rb = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody>();
        
     }
     // Update is called once per frame
@@ -31,24 +31,23 @@ public class FollowerEnemy : Enemy {
 
         if (collision.gameObject.name == "Player")
         {
+            // FIX: Get player script here?
             if (playerScript.canTakeDamage)
             {
-                playerScript.health -= damage;
-                playerScript.bounceFactor = chaseTarget;
+                playerScript.TakeDamage(health);
                 playerScript.Bounce();
-                playerScript.canTakeDamage = false;
                 boxCol.isTrigger = true;
                 BounceBack();
             }
-            print(playerScript.canTakeDamage);
         }
         
     }
 
     void BounceBack()
     {
-        
-        rb.AddForce(-chaseTarget.x * 1.5f , -chaseTarget.y * 1.5f, 0, ForceMode.Impulse);
+        // TODO: Move to Enemy class? I think other Enemy types will want this.
+        // Make `chaseTarget` a parameter of the function
+        body.AddForce(-chaseTarget.x , -chaseTarget.y, 0, ForceMode.Impulse);
         boxCol.isTrigger = false;
        
     }
