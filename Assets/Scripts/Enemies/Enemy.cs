@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour {
     public GameObject target;
     public Player playerScript;
     public BoxCollider boxCol;
-    public Rigidbody rb;
+    public Rigidbody body;
 
     // Use this for initialization
     void Start () {
