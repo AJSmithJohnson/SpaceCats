@@ -12,7 +12,8 @@ public class Enemy : MonoBehaviour {
     public Player playerScript;
     public BoxCollider boxCol;
     public Rigidbody body;
-
+    public float bounceForce;
+    public Vector3 chaseTarget;
     // Use this for initialization
     void Start () {
 		
@@ -22,6 +23,13 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		
 	}
+
+
+    public void ApplyBounce(Vector3 otherOBJ)
+    {
+        Vector3 dir = this.transform.position - otherOBJ;
+        body.AddForce(dir.x, dir.y, 0, ForceMode.Impulse);
+    }
 
     
 }

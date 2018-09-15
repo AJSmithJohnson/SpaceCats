@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 
     public float invulnerableTime = 30;
     private float iTimeRemaining = 0;
+    public Rigidbody body;
 
     public bool canTakeDamage {
         get
@@ -17,8 +18,8 @@ public class Player : MonoBehaviour {
     }
 	// Use this for initialization
 	void Start () {
-		
-	}
+		 body = GetComponent<Rigidbody>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,8 +38,9 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void Bounce()//Add a game object reference and calculate bounce facter here
+    public void Bounce(Vector3 bounceFactor)
     {
-        //.AddForce(bounceFactor.x, bounceFactor.y, 0, ForceMode.Impulse);
+        print("Bounce factor working");
+       body.AddForce(bounceFactor.x, bounceFactor.y, 0, ForceMode.Impulse);
     }
 }
