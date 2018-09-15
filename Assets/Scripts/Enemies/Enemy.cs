@@ -31,5 +31,20 @@ public class Enemy : MonoBehaviour {
         body.AddForce(dir.x, dir.y, 0, ForceMode.Impulse);
     }
 
+    public void TakeDamage(float amount)
+    {
+        
+        health -= damage;
+        CheckForDeath();
+    }
+
+    public void CheckForDeath()
+    {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     
 }
