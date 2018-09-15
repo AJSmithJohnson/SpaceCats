@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-    public float forceKickback = 100;
     public Projectile prefabProjectile;
+
+    public float forceKickback = 100;
+    public float ammoMax = 10;
+    float ammo;
+    
+    void Start()
+    {
+        ammo = ammoMax;
+    }
 
     public float Shoot(Vector3 dir)
     {
-        // TODO: check ammo
+        if (ammo <= 0) return 0;
         // TODO: check cooldown
 
         Projectile p = Instantiate(prefabProjectile, transform.position, Quaternion.identity);
