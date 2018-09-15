@@ -64,5 +64,9 @@ public class Projectile : MonoBehaviour {
             if(enemy) enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
+        if(col.gameObject.tag == "BackGround" || col.gameObject.tag == "Environment")
+        {
+            Destroy(gameObject);
+        }
     }
 }

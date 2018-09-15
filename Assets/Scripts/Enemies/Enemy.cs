@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour {
         CheckForDeath();
     }
 
-    public void CheckForDeath()
+    public virtual void CheckForDeath()
     {
         if(health <= 0)
         {
