@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Gravity : MonoBehaviour
 {
-
+    static public float angle { get; private set; }
+    static public float power { get; private set; }
     static private Vector3 acceleration;
     Rigidbody body;
     
@@ -18,12 +19,15 @@ public class Gravity : MonoBehaviour
     {
         body.AddForce(acceleration * Time.deltaTime);
     }
-    static void RandomGravityDirection()
+    static public void RandomGravityDirection()
     {
         SetGravity(Random.Range(0, 360));
     }
-    static private void SetGravity(float angle, float power = 200)
+    static public void SetGravity(float angle, float power = 200)
     {
+        Gravity.angle = angle;
+        Gravity.power = power;
+
         angle *= Mathf.Deg2Rad;
         Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
         acceleration = direction * power;
