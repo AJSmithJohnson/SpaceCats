@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - BackGround
-  - Environment
+  - Cat
   layers:
   - Default
   - TransparentFX
