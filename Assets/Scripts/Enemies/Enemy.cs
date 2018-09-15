@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour {
     public float damage;
     public float speed;
     public GameObject target;
+    public Player playerScript;
+    public BoxCollider boxCol;
+    public Rigidbody rb;
 
     // Use this for initialization
     void Start () {
@@ -19,4 +22,6 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    
 }
