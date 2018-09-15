@@ -35,6 +35,7 @@ public class FollowerEnemy : Enemy {
             {
                 playerScript.health -= damage;
                 playerScript.bounceFactor = chaseTarget;
+                playerScript.Bounce();
                 playerScript.canTakeDamage = false;
                 boxCol.isTrigger = true;
                 BounceBack();

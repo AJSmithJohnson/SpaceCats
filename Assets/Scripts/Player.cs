@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
         print(iFrames);
 	}
 
-    void Bounce()
+    public void Bounce()
     {
         rb.AddForce(bounceFactor.x, bounceFactor.y, 0, ForceMode.Impulse);
     }
