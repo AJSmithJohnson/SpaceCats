@@ -22,7 +22,7 @@ public class Gravity : MonoBehaviour
     {
         SetGravity(Random.Range(0, 360));
     }
-    static private void SetGravity(float angle, float power = 200)
+    static private void SetGravity(float angle, float power = 400)
     {
         angle *= Mathf.Deg2Rad;
         Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
