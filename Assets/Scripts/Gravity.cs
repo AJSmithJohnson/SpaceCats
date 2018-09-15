@@ -23,7 +23,7 @@ public class Gravity : MonoBehaviour
     {
         SetGravity(Random.Range(0, 360));
     }
-    static private void SetGravity(float angle, float power = 400)
+    static private void SetGravity(float angle, float power = 300)
     {
         Gravity.angle = angle;
         Gravity.power = power;

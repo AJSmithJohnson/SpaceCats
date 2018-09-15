@@ -6,12 +6,20 @@ public class WeaponHolder : MonoBehaviour {
 
     public Camera cam;
     private Rigidbody body;
-    private Weapon weapon;
+    private Weapon currentWeapon;
+    private Weapon weapon1;
+    private Weapon weapon2;
+    private Weapon weapon3;
 
 	void Start () {
         body = GetComponent<Rigidbody>();
-        weapon = GetComponentInChildren<Weapon>();
-	}
+        //weapon = GetComponentInChildren<Weapon>();
+        weapon1 = this.transform.GetChild(0).GetComponent<Weapon>();
+        weapon2 = this.transform.GetChild(1).GetComponent<Weapon>();
+        weapon2 = this.transform.GetChild(2).GetComponent<Weapon>();
+
+        currentWeapon = weapon1;
+    }
 	
 	void Update () {
 
@@ -32,7 +40,7 @@ public class WeaponHolder : MonoBehaviour {
         if (Input.GetButton("Fire1"))
         {
             thrustDir.Normalize();
-            float thrust = weapon.Shoot(-thrustDir);
+            float thrust = currentWeapon.Shoot(-thrustDir);
             body.AddForce(thrustDir * thrust, ForceMode.Impulse);
         }
 	}
