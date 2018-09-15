@@ -21,7 +21,8 @@ public class FollowerEnemy : Enemy {
     {
         
         chaseTarget = target.transform.position - this.transform.position;
-        this.transform.position += chaseTarget * .01f;
+        //this.transform.position += chaseTarget * .2f;
+        rb.AddForce(chaseTarget.x, chaseTarget.y, 0);
        
     }
 
@@ -33,6 +34,7 @@ public class FollowerEnemy : Enemy {
             if (playerScript.canTakeDamage)
             {
                 playerScript.health -= damage;
+                playerScript.bounceFactor = chaseTarget;
                 playerScript.canTakeDamage = false;
                 boxCol.isTrigger = true;
                 BounceBack();
@@ -45,8 +47,9 @@ public class FollowerEnemy : Enemy {
     void BounceBack()
     {
         
-        rb.AddForce(-chaseTarget.x , -chaseTarget.y, 0, ForceMode.Impulse);
+        rb.AddForce(-chaseTarget.x * 1.5f , -chaseTarget.y * 1.5f, 0, ForceMode.Impulse);
         boxCol.isTrigger = false;
+       
     }
     
 }

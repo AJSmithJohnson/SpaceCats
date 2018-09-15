@@ -8,10 +8,12 @@ public class Player : MonoBehaviour {
     public float health = 100;
     public float iFrames = 250;
     public bool canTakeDamage = true;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public Vector3 bounceFactor;
+    public Rigidbody rb;
+    // Use this for initialization
+    void Start () {
+        rb = GetComponent<Rigidbody>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,4 +31,9 @@ public class Player : MonoBehaviour {
         
         print(iFrames);
 	}
+
+    void Bounce()
+    {
+        rb.AddForce(bounceFactor.x, bounceFactor.y, 0, ForceMode.Impulse);
+    }
 }
