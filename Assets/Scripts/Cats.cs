@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Cats : MonoBehaviour
 {
-    int numberOfCats = 0;
+   public int numberOfCats = 0;
     int totalCats;
+    public GameObject winPanel;
 
     // Use this for initialization
     void Start()
     {
+        winPanel.SetActive(false);
+
         GameObject[] cat;
         cat = GameObject.FindGameObjectsWithTag("Cat");
         foreach(GameObject c in cat)
@@ -32,6 +35,8 @@ public class Cats : MonoBehaviour
             if (numberOfCats == totalCats)
             {
                 Debug.Log("YOU WIN!!");
+                winPanel.SetActive(true);
+                Time.timeScale = 0;
             }
             else
             {

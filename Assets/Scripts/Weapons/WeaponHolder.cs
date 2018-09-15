@@ -53,7 +53,7 @@ public class WeaponHolder : MonoBehaviour {
 
     void SetWeapon(int x)
     {
-        Debug.Log("Switching to " + x);
+       // Debug.Log("Switching to " + x);
         switch (x)
         {
             case 1:
