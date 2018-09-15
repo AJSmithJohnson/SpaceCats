@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class quit : MonoBehaviour {
 
-	public void close()
+	public void Credits()
     {
-        Application.Quit();
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Credits");
     }
 }
