@@ -10,4 +10,10 @@ public class quit : MonoBehaviour {
         Time.timeScale = 1;
         SceneManager.LoadScene("Credits");
     }
+
+    public void Menu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
