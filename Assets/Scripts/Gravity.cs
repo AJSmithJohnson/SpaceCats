@@ -7,6 +7,10 @@ public class Gravity : MonoBehaviour
     static public float angle { get; private set; }
     static public float power { get; private set; }
     static private Vector3 acceleration;
+
+    public AudioSource Player;
+    public AudioClip gravitySound;
+
     Rigidbody body;
     
     void Start()
@@ -31,5 +35,7 @@ public class Gravity : MonoBehaviour
         angle *= Mathf.Deg2Rad;
         Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
         acceleration = direction * power;
+        
     }
+    
 }
